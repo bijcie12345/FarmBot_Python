@@ -6,7 +6,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'cd flask'
-        sh 'python3 -m venv env'
+        sh 'python -m venv env'
         sh 'source env/bin/activate'
         sh 'pip install flask uwsgi'
         sh 'cd ..'
