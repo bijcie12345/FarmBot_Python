@@ -1,11 +1,25 @@
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
+
+  agent any
+  
   stages {
     stage('build') {
       steps {
-        sh 'sudo docker-compose build'
-        sh 'sudo docker-compose up'
+        sh 'cd flask'
+        sh 'python3 -m venv env'
+        sh 'source env/bin/activate'
+        sh 'pip install flask uwsgi'
+        sh 'cd ..'
+        sh 'export FLASK_APP=run.py'
+        sh 'export FLASK_ENV=development'
+        sh 'docker-compose build'
+        sh 'docker-compose up'
       }
     }
   }
+   post {
+      always {
+         sh "docker-compose down || true"
+      }
+   }   
 }
