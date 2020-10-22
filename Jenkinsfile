@@ -1,5 +1,7 @@
 pipeline {
-  agent { docker { image 'python:3.7.2' } }
+
+  agent any
+  
   stages {
     stage('build') {
       steps {
@@ -8,4 +10,9 @@ pipeline {
       }
     }
   }
+   post {
+      always {
+         sh "docker-compose down || true"
+      }
+   }   
 }
