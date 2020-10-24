@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh "sudo chown root:jenkins /run/docker.sock"
       }
-      
+    }
     stage('build') {
       steps {
         sh 'cd flask'
