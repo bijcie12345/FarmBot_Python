@@ -5,8 +5,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        sh 'echo ${USER}'
         sh 'docker-compose build'
         sh 'docker-compose up'
+      
       }
     }
   }
