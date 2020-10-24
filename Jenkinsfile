@@ -3,7 +3,6 @@ pipeline {
   agent none
 
   stages {
-
     stage("Fix the permission issue") {
 
       agent any
@@ -11,8 +10,7 @@ pipeline {
       steps {
         sh "sudo chown root:jenkins /run/docker.sock"
       }
-    }
-  stages {
+      
     stage('build') {
       steps {
         sh 'cd flask'
