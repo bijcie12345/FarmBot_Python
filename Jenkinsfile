@@ -9,7 +9,9 @@ pipeline {
       }
     }
     stage('up app'){
+      steps{
        sh 'sudo docker-compose up'
+      }
     }
   }
    post {
