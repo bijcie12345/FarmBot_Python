@@ -5,11 +5,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo ${USER}'
-        sh 'sudo docker-compose build'
-        sh 'sudo docker-compose up'
-      
+        sh 'sudo docker-compose build'       
       }
+    }
+    stage('up app'){
+       sh 'sudo docker-compose up'
     }
   }
    post {
