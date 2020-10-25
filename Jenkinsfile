@@ -5,18 +5,18 @@
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t myimage .'     
+        sh 'sudo docker build -t myimage .'     
       }
     }
     stage('run'){
         steps {
-          sh 'docker run -d --name mycontainer -p 80:80 myimage'
+          sh 'sudo docker run -d --name mycontainer -p 80:80 myimage'
         }
     }
   }
    post {
       always {
-         sh "docker-compose down || true"
+         sh "sudo docker-compose down || true"
       }
    }   
 }
