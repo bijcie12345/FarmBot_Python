@@ -5,7 +5,7 @@
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t myimage'     
+        sh 'docker build -t myimage .'     
       }
     }
     stage('run'){
