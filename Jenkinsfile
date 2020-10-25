@@ -15,8 +15,14 @@
     }
   }
    post {
-      always {
-         sh "sudo docker-compose down || true"
-      }
+        success {
+            echo 'I succeeded!'
+        }
+        failure {
+            echo 'I failed :('
+        } 
+    //   always {
+    //      sh "sudo docker-compose down || true"
+    //   }
    }   
 }
