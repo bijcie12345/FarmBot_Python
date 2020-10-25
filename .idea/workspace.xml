@@ -27,6 +27,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="54583ffe-79bf-43ac-9efe-8d90b3364056" name="Default Changelist" comment="" />
@@ -35,7 +36,11 @@
       <option name="presentableId" value="Default" />
       <updated>1603370773233</updated>
       <workItem from="1603370775400" duration="7000" />
+      <workItem from="1603565761863" duration="52000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
