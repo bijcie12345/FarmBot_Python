@@ -3,11 +3,11 @@
   agent any
   
   stages {
-    stage('build') {
-      steps {
-        sh 'sudo docker build -t myimage .'     
-      }
-    }
+    // stage('build') {
+    //   steps {
+    //     sh 'sudo docker build -t myimage .'     
+    //   }
+    // }
     stage('run'){
         steps {
           sh 'sudo docker run -d --name mycontainer -p 80:80 myimage'
