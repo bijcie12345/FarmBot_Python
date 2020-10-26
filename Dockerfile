@@ -1,5 +1,7 @@
 #!/usr/bin/env
 
-FROM tiangolo/uwsgi-nginx-flask:python3.7
+FROM cseelye/rpi-nginx-uwsgi-flask:latest
 
 COPY ./app /app
+
+RUN pip install -U -r /app/requirements.txt
