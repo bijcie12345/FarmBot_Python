@@ -10,7 +10,7 @@
     }
     stage('run'){
         steps {
-          sh 'sudo docker run -d --name mycontainer -p 80:80 myimage'
+          sh 'sudo docker run -d --name mycontainer -p 8082:80 myimage'
         }
     }
   }
