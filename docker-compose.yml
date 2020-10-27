@@ -17,3 +17,11 @@ services:
     restart: always
     ports:
       - "80:80"
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports: 
+      - 5432:5432
