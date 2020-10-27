@@ -4,22 +4,14 @@ pipeline {
   
   stages {
     stage('build') {
+      steps{
+        sh 'sudo docker-compose build'
+      }
+    }
+    stage('build') {
       steps {
-        sh 'cd flask'
-        sh 'python -m venv env'
-        sh 'source env/bin/activate'
-        sh 'pip install flask uwsgi'
-        sh 'cd ..'
-        sh 'export FLASK_APP=run.py'
-        sh 'export FLASK_ENV=development'
-        sh 'docker-compose build'
-        sh 'docker-compose up'
+        sh 'sudo docker-compose up -d'
       }
     }
   }
-   post {
-      always {
-         sh "docker-compose down || true"
-      }
-   }   
 }
