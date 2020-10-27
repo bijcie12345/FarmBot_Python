@@ -8,7 +8,7 @@ pipeline {
         sh 'sudo docker-compose build'
       }
     }
-    stage('build') {
+    stage('deploy') {
       steps {
         sh 'sudo docker-compose up -d'
       }
