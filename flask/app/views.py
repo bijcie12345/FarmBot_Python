@@ -1,5 +1,6 @@
 from app import app
 import os
+from farmbot.configurations import serialPort
 
 @app.route("/")
 def index():
@@ -14,4 +15,5 @@ def index():
 
 @app.route("/dev", methods=['GET'])
 def home():
-    return "<h1>Distant reading archive</h1><p>This site is a prototpye API for ...</p>"
+    a = serialPort.connect_serial_port()
+    return f"<h1>Distant reading archive</h1><p>This sitedsds is a prototpye API for ...</p> {a}"
